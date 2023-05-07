@@ -1,0 +1,59 @@
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content:start space-around;
+    text-align: center;
+    height: 100%;
+    padding-top: 1vh;
+}
+
+form {
+    width: 30%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:start space-around;
+}
+
+.subForm {
+    width: 100%;
+    display: inline-block;
+}
+
+.main_component {
+    align-items:center;
+}
+
+span {
+    padding: 5px 5px 5px 5px;
+    text-align: left;
+}
+
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    font-size: large;
+}
+
+@media (max-width: 800px) {
+    form {
+        width: 80%;
+    }
+  }
+
+  h2 {
+    display: block;
+font-size: 1.5em;
+margin-top: 0.83em;
+margin-bottom: 0.83em;
+font-weight: bold;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    font-weight: bold;
+}

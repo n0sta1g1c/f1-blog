@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "f1-blog-ac589": {
+      "hosting": {
+        "f1-blog": [
+          "formation-lap"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "f1-blog-ac589"
+  }
+}

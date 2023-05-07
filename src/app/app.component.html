@@ -1,0 +1,29 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <app-menu (selectedPage)="changePage($event)" [currentPage]="page" *ngIf="page" (onCloseSidenav)="onClose($event, sidenav)" [loggedInUser]="loggedInUser" (onLogout)="logout($event)"></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div fxHide.gt-xs>
+        <button mat-icon-button (click)="onToggleSidenav(sidenav)">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+    
+      <div fxFlex fxLayout fxLayoutAlign="start center" fxHide.xs >
+        <div ><a routerLink="/main"><img src="assets/f1.png" height= 60vh></a></div>
+        <ul fxLayout fxLayoutGap="10px" class="navigation-items" >
+          <li><a routerLink="/schedule">Scedule</a></li>
+          <li><a routerLink="/results">Results</a></li>
+          <li><a routerLink="/drivers">Drivers</a></li>
+          <li><a routerLink="/teams">Teams</a></li>
+        </ul>
+      </div>
+      <div *ngIf="!(loggedInUser)" class="navigation-icon" fxFlex fxLayoutAlign="end center"><a routerLink="/login"><mat-icon >account_box</mat-icon></a></div>
+      <div *ngIf="loggedInUser" fxFlex fxLayoutAlign="end center"><a routerLink="/profile"><span>{{loggedInUser.email}}</span><mat-icon>account_box</mat-icon></a></div>
+      <div *ngIf="loggedInUser" id="logouticon" fxFlex fxLayoutAlign="end center"><a routerLink="/login" (click)="logout()"><mat-icon>logout</mat-icon></a></div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

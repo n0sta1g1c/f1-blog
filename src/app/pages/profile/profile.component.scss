@@ -1,0 +1,80 @@
+h2 {
+    display: block;
+font-size: 1.5em;
+margin-top: 0.83em;
+margin-bottom: 0.83em;
+
+font-weight: bold;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+
+    font-weight: bold;
+}
+
+.div-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: start space-around;
+    text-align: center;
+    height: 100%;
+}
+
+.main_component {
+    height: 100vh;
+}
+
+form div {
+    padding: 5px 5px 5px 5px;
+}
+
+form {
+    display: inline-grid;
+    width: 30%;
+    align-self: center;
+    
+}
+
+.subForm {
+    width: 100%;
+    display: inline-grid;
+}
+
+.buttons {
+    padding: 5px;
+    text-align: right;
+}
+
+button {
+    width: 100px;
+}
+
+h2{
+    text-align: left;
+}
+
+.p{
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+p{
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px 5px 5px 5px;
+}
+
+span {
+    font-weight: bold;
+    font-style: italic;
+}
+
+@media (max-width: 800px) {
+    form {
+        width: 80%;
+    }
+  }

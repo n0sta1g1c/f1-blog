@@ -1,0 +1,166 @@
+$gray-darker:               #444444;
+$gray-dark:                 #696969;
+$gray:                      #999999;
+$gray-light:                #cccccc;
+$gray-lighter:              #ececec;
+$gray-lightest:             lighten($gray-lighter,4%);
+
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #f0f0f0;
+}
+
+body {
+  color: $gray;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  background-color: white;
+  border: 1px solid $gray-light;
+  //border-radius: 1rem;
+  color: $gray-dark;
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+ 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  display: flex;
+  padding: 1rem;
+  @media(min-width: 40rem) {
+    width: 50%;
+  }
+  @media(min-width: 56rem) {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  &:hover {
+    .card__image {
+      filter: contrast(100%);
+    }
+  }
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  //filter: saturate(180%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+  &::before {
+    content: "";
+	  display: block;
+    padding-top: 56.25%; // 16:9 aspect ratio
+  }
+  @media(min-width: 40rem) {
+    &::before {
+      padding-top: 66.6%; // 3:2 aspect ratio
+    }
+  }
+}
+
+.card__image--williams {
+  background-image: url(https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/williams.jpg);
+}
+
+.card__image--mercedes {
+  background-image: url(https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/mercedes.jpg);
+}
+
+.card__image--redbull {
+  background-image: url(https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/red%20bull.jpg);
+}
+
+.card__image--alfaromeo {
+    background-image: url(https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/alfa%20romeo.jpg);
+  }
+
+.card__image--alphatauri {
+    background-image: url(https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/alphatauri.jpg);
+  }
+
+.card__image--alpine {
+    background-image: url(https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/alpine.jpg);
+  }
+
+.card__image--haas {
+    background-image: url(https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/haas.jpg);
+  }
+
+.card__image--aston {
+    background-image: url(https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/aston%20martin.jpg);
+  }
+
+.card__image--ferrari {
+  background-image: url(https://media.formula1.com/content/dam/fom-website/teams/Ferrari/logo-ferrari-18%20.jpg);
+}
+
+.card__image--mclaren {
+    background-image: url(https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/mclaren.jpg);
+}
+
+.card__title {
+  color: $gray-dark;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}

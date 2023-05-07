@@ -1,0 +1,77 @@
+<div class="main_component">
+    <div class="div-flex">
+        <h1>Edit your account!</h1>
+
+        <form [formGroup]="emailForm" (ngSubmit)="onChangeEmail()">
+            <h2>Email</h2>
+                <div class="p">
+                    <p>Current: <span> {{loggedInUser?.email}} </span> </p>
+                </div>
+            <mat-form-field>
+                <mat-label for="newEmail">New email address: </mat-label>
+                <input matInput type="text" formControlName="newEmail" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="renewEmail">Confirm new email address: </mat-label>
+                <input matInput type="text" formControlName="renewEmail" />
+            </mat-form-field>
+            <span class="buttons">
+                <button mat-raised-button color="primary" type="submit">Edit</button>
+            </span>
+        </form>
+
+        <form [formGroup]="usernameForm" (ngSubmit)="onChangeUsername()">
+            <h2>Username</h2>
+            <div class="p">
+                <p>Current: <span> {{loggedInUser?.email}} </span> </p>
+            </div>
+            <mat-form-field>
+                <mat-label for="newUsername">Username: </mat-label>
+                <input matInput type="text" formControlName="newUsername" />
+            </mat-form-field>
+            <span class="buttons">
+                <button mat-raised-button color="primary" type="submit">Edit</button>
+            </span>
+        </form>
+
+        <form [formGroup]="passwordForm" (ngSubmit)="onChangePW()">
+            <h2>Password</h2>
+            <mat-form-field>
+                <mat-label for="password">Current password: </mat-label>
+                <input matInput type="password" formControlName="password" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="NewPassword">New password: </mat-label>
+                <input matInput type="password" formControlName="newPassword" />
+            </mat-form-field>
+            <span class="buttons">
+                <button mat-raised-button color="primary" type="submit">Edit</button>
+            </span>
+        </form>
+
+        <form [formGroup]="nameForm" (ngSubmit)="onChangeName()">
+            <h2>Name</h2>
+            <div class="p">
+                <p>Current: <span> {{loggedInUser?.email}} </span> </p>
+            </div>
+            <div formGroupName="newName" class="subForm">
+                <mat-form-field>
+                    <mat-label for="newFirstname">First name: </mat-label>
+                    <input matInput type="text" formControlName="newFirstname" />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label for="newLastname">Last name: </mat-label>
+                    <input matInput type="text" formControlName="newLastname" />
+                </mat-form-field>
+                <span class="buttons">
+                    <button mat-raised-button color="primary" type="submit">Edit</button>
+                </span>
+            </div>
+        </form>
+        <div>
+            <span class="buttons">
+                <button mat-raised-button color="primary">Delete</button>
+            </span>
+        </div>
+    </div>
+</div>
